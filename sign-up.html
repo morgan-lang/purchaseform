@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script>
+        $(function() {
+    //$( "#datepicker" ).datepicker();
+        });
+        </script>
+ 
+        <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+
+		<meta charset="UTF-8">
+      
+		<title>BoomShoes!</title> 
+      
+		<!-- link to an external style sheet (best practice with style sheet)-->
+		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	</head>
+  
+	   <body class="page"><!-- everything that is visual goes in the body tag  -->
+		  <header>
+			<!-- the "banner" area or title of the page-->
+			<h1>BoomShoes!</h1> <!-- only h1 per page (for SEO purposes) --> 	
+		  </header>
+		    <nav class="nav1"> 
+			 <ul>
+				<!-- these links are relative paths -->
+				<li> <a href="#">home</a></li>
+				<li> <a href="#">gallery</a></li>
+				<li> <a href="sign-up.html">Sign Up Here</a></li>
+				<li> <a href="#">Mobile Site</a></li>
+				<li> <a href="http://www.google.com">Google</a></li>
+			 </ul>
+		    </nav>
+         
+		    <div id="mainContent">
+              <h2>BoomShoes Store</h2>
+                <img src="images/boombox-shoes.jpg" alt="BoomShoes shown in Vanilla Ice White.">
+          
+                  <h3>To puchase a pair of BoomShoes, please complete the following information</h3>
+                    <p>
+                    <br>
+                    </p>
+              
+			<!-- Color and Quantity  -->
+          
+                    <form id="customerinfo" method="post" action="#">
+            
+                    <fieldset>
+                    <legend>Select Your BoomShoes Color and Quantity to Order</legend>
+            
+                    <input type="color" id="colorpicker" name="color" value="#ffffff" autofocus>
+              
+                      <p>
+                      <br>
+                      </p>
+              
+                    <select name="shoequantity">
+                    <option value="Quantity">Quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                      </select>
+
+                    </fieldset>
+              
+<!--Customer Info-->            
+            
+	<fieldset>
+		<legend>Name, Telephone, and Email Address</legend>
+		<ul>
+			<li>
+				<label for=firstname>First Name</label>
+				<input id=firstname name=firstname type=text placeholder="enter your first name" pattern="[a-zA-Z]{2,64}" required>
+              <label for=lastname>Last Name</label>
+              <input id=lastname name=lastname type=text placeholder="enter your last name" pattern="[a-zA-Z]{2,64}" required>
+			</li>
+			<li>
+				<label for=email>Valid Email Address</label>
+				<input id=email name=email type=email placeholder="you@example.com" required>
+			</li>
+			<li>
+				<label for=phone>Telephone Number</label>
+				<input id=phone name=phone type=tel placeholder="123-123-1234" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+			</li>
+		</ul>
+	</fieldset>
+            
+	<fieldset>
+		<legend>Shipping Address</legend>
+		<ul>
+			<li>
+				<label for=address>Street Address</label>
+				<textarea id=address name=address rows=5 required></textarea>
+			</li>
+			<li>
+				<label for="zipcode">Zip Code</label>
+				<input type="text" placeholder="12345" id="zipcode" pattern="^[0-9]{5}" required>
+			</li>
+          
+			<li>
+				<select name="country">
+                  <option value="">Country</option>
+                  <option value="US">United States</option>
+                  <option value="AF">Afghanistan</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AS">American Samoa</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AG">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AG">Antigua &amp; Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AA">Armenia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="AZ">Azerbaijan</option>
+                  <option value="BS">Bahamas</option>
+                  <option value="BH">Bahrain</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="BB">Barbados</option>
+
+                </select>
+			</li>
+          </ul>
+      </fieldset>
+                      
+<!--Credit Card Info-->
+
+      <fieldset>
+          <legend>Credit Card Information</legend>
+            <ul>		
+              <li>
+                <fieldset>
+                  <legend>Select your Card's Issuer</legend>
+                    <ul>
+                      <li>
+                        <input id=visa name=cardtype type=radio>
+                        <label for=visa>VISA</label>
+                      </li>
+
+                      <li>
+                        <input id=mastercard name=cardtype type=radio>
+                        <label for=mastercard>Mastercard</label>
+                      </li>
+                    </ul>
+                </fieldset>
+              </li>
+
+              <li>
+                <label for=cardnumber>Card Number</label>
+                <input id=cardnumber name=cardnumber placeholder="0123-0123-0123-0123" type=text pattern="\d{4}[\-]\d{4}[\-]\d{4}[\-]\d{4}" required>
+              </li>
+            
+              <li>
+                <label for=securitycode>Security Code</label>
+                <input id=securitycode name=securitycode placeholder="123" type=text pattern="^[0-9]{3}" required>
+              </li>
+            
+              <li>
+                <label for=namecard>Name Apprearing on Card</label>
+                <input id=namecard name=namecard type=text placeholder="Example Q Person" required>
+              </li>
+            </ul>
+      </fieldset>
+                      
+<!--Purchase Button-->
+
+      <fieldset>
+          <button type=submit>Puchase BoomShoes</button>
+      </fieldset>
+
+  </form>
+		    	
+
+        </div><!-- closing maincContent div tag -->
+		
+		
+<!--  This is the footer section, only footer stuff -->
+         
+		<footer>
+			<p>&copy; Morgan Lang 2016</p>
+			
+		</footer>
+
+	</body>
+</html>
